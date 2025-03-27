@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Recipe Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .recipe {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Global Recipe Book</h1>
+        
+        <div class="recipe">
+            <h2>Tagine (Morocco)</h2>
+            <img src="tagine.jpg" alt="Tagine Dish">
+            <p><strong>History:</strong> A slow-cooked North African stew with deep cultural significance.</p>
+            <p><strong>Ingredients:</strong> List of ingredients here...</p>
+            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+        </div>
+        
+        <div class="recipe">
+            <h2>Waffles (Belgium)</h2>
+            <img src="waffles.jpg" alt="Belgian Waffles">
+            <p><strong>History:</strong> A beloved European dish with rich cultural roots.</p>
+            <p><strong>Ingredients:</strong> List of ingredients here...</p>
+            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+        </div>
+        
+        <div class="recipe">
+            <h2>Adobo (Philippines)</h2>
+            <img src="adobo.jpg" alt="Adobo Dish">
+            <p><strong>History:</strong> A Filipino dish with indigenous and Spanish influences.</p>
+            <p><strong>Ingredients:</strong> List of ingredients here...</p>
+            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+        </div>
+    </div>
+</body>
+</html>
