@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Recipe Book</title>
+    <title>Interactive Recipe Site</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,67 +11,40 @@
             background-color: #f8f8f8;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
         }
-        .country-buttons button {
-            padding: 10px 20px;
+        .country {
+            padding: 15px;
             margin: 10px;
-            font-size: 18px;
-            cursor: pointer;
+            background-color: #ffcc66;
             border: none;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            border-radius: 8px;
         }
-        .recipe {
+        .country:hover {
+            background-color: #ffb347;
+        }
+        .recipe-container {
             display: none;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Global Recipe Book</h1>
-        <p>Click a country to view its recipe:</p>
-        <div class="country-buttons">
-            <button onclick="showRecipe('morocco')">Morocco</button>
-            <button onclick="showRecipe('belgium')">Belgium</button>
-            <button onclick="showRecipe('philippines')">Philippines</button>
-        </div>
-        
-        <div id="morocco" class="recipe">
-            <h2>Tagine (Morocco)</h2>
-            <p><strong>History:</strong> Tagine is a slow-cooked stew, traditionally made in a clay pot. It reflects Moroccan flavors with spices like cumin, coriander, and cinnamon.</p>
-            <p><strong>Ingredients:</strong> Lamb or chicken, onions, tomatoes, preserved lemon, olives, cumin, and saffron.</p>
-            <p><strong>Preparation:</strong> Meat is slow-cooked with spices and vegetables until tender.</p>
-        </div>
-        
-        <div id="belgium" class="recipe">
-            <h2>Waffles (Belgium)</h2>
-            <p><strong>History:</strong> Belgian waffles originated in the Middle Ages and became globally famous for their fluffy texture and deep pockets.</p>
-            <p><strong>Ingredients:</strong> Flour, eggs, milk, sugar, yeast, butter.</p>
-            <p><strong>Preparation:</strong> The batter is prepared and cooked in a waffle iron until golden brown.</p>
-        </div>
-        
-        <div id="philippines" class="recipe">
-            <h2>Adobo (Philippines)</h2>
-            <p><strong>History:</strong> Adobo dates back to pre-colonial times when Filipinos preserved meat using vinegar and salt.</p>
-            <p><strong>Ingredients:</strong> Chicken or pork, soy sauce, vinegar, garlic, bay leaves, black pepper.</p>
-            <p><strong>Preparation:</strong> The meat is marinated and then slow-cooked until tender.</p>
-        </div>
+        <h1>Choose a Country</h1>
+        <button class="country" onclick="location.href='tagine.html'">Morocco - Tagine</button>
+        <button class="country" onclick="location.href='adobo.html'">Philippines - Adobo</button>
+        <button class="country" onclick="location.href='waffles.html'">Belgium - Waffles</button>
     </div>
-
-    <script>
-        function showRecipe(country) {
-            document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
-            document.getElementById(country).style.display = 'block';
-        }
-    </script>
 </body>
 </html>
