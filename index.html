@@ -7,57 +7,71 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            text-align: center;
             background-color: #f8f8f8;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: auto;
-            text-align: center;
             padding: 20px;
+        }
+        .country-buttons button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
         }
         .recipe {
+            display: none;
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 10px;
+            margin-top: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Global Recipe Book</h1>
+        <p>Click a country to view its recipe:</p>
+        <div class="country-buttons">
+            <button onclick="showRecipe('morocco')">Morocco</button>
+            <button onclick="showRecipe('belgium')">Belgium</button>
+            <button onclick="showRecipe('philippines')">Philippines</button>
+        </div>
         
-        <div class="recipe">
+        <div id="morocco" class="recipe">
             <h2>Tagine (Morocco)</h2>
-            <img src="https://broccyourbody.com/wp-content/uploads/2021/05/787522D6-8F9C-4B24-B5D7-FFE86BCF6A8B-scaled.jpeg" alt="Tagine Dish">
-            <p><strong>History:</strong> A slow-cooked North African stew with deep cultural significance.</p>
-            <p><strong>Ingredients:</strong> List of ingredients here...</p>
-            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+            <p><strong>History:</strong> Tagine is a slow-cooked stew, traditionally made in a clay pot. It reflects Moroccan flavors with spices like cumin, coriander, and cinnamon.</p>
+            <p><strong>Ingredients:</strong> Lamb or chicken, onions, tomatoes, preserved lemon, olives, cumin, and saffron.</p>
+            <p><strong>Preparation:</strong> Meat is slow-cooked with spices and vegetables until tender.</p>
         </div>
         
-        <div class="recipe">
+        <div id="belgium" class="recipe">
             <h2>Waffles (Belgium)</h2>
-            <img src="https://www.anasbakingchronicles.com/wp-content/uploads/2021/09/Belgian-Liege-Waffles_Featured-image.jpg" alt="Belgian Waffles">
-            <p><strong>History:</strong> A beloved European dish with rich cultural roots.</p>
-            <p><strong>Ingredients:</strong> List of ingredients here...</p>
-            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+            <p><strong>History:</strong> Belgian waffles originated in the Middle Ages and became globally famous for their fluffy texture and deep pockets.</p>
+            <p><strong>Ingredients:</strong> Flour, eggs, milk, sugar, yeast, butter.</p>
+            <p><strong>Preparation:</strong> The batter is prepared and cooked in a waffle iron until golden brown.</p>
         </div>
         
-        <div class="recipe">
+        <div id="philippines" class="recipe">
             <h2>Adobo (Philippines)</h2>
-            <img src="https://i0.wp.com/mykitchenlittle.com/wp-content/uploads/2020/06/Filipino-Chicken-Adobo-with-Coconut-Rice-4-scaled.jpeg?fit=1707%2C2560&ssl=1" alt="Adobo Dish">
-            <p><strong>History:</strong> A Filipino dish with indigenous and Spanish influences.</p>
-            <p><strong>Ingredients:</strong> List of ingredients here...</p>
-            <p><strong>Preparation:</strong> Steps to prepare the dish...</p>
+            <p><strong>History:</strong> Adobo dates back to pre-colonial times when Filipinos preserved meat using vinegar and salt.</p>
+            <p><strong>Ingredients:</strong> Chicken or pork, soy sauce, vinegar, garlic, bay leaves, black pepper.</p>
+            <p><strong>Preparation:</strong> The meat is marinated and then slow-cooked until tender.</p>
         </div>
     </div>
+
+    <script>
+        function showRecipe(country) {
+            document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
+            document.getElementById(country).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
